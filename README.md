@@ -18,7 +18,7 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
     - VIM: Luckie believes strongly in pathogen, and in using vim as opposed to mvim, but feel free to modify and change at your leisure. If you aren't familiar with pathogen, take a look at your .vim folder. Instead of the usual menagerie, you are going to see a bundles folder, containing all the plugins we think are awesome. If you want to add your favorites to the list, modify the ~/bin/vim-bundle file with a new line, where the two arguments are the username and name of a git repository containing the plugin. Then run vim-bundle, and you are done. All your plugins will be updated and kept happy and safe. Read [tpope's documentation](https://github.com/tpope/vim-pathogen) for more details.
     - BREW: we rely on brew for updating, and especially for a couple of crucial updates. For most of the program we use, just run ./brew_install.sh to run through the list. You should also make sure you update Bash to version 4.2 (this [guide here](http://od-eon.com/blogs/stefan/upgrading-bash-os-x/) is excellent) as well as follow [this guide](http://blog.jerodsanto.net/2011/08/brew-install-vim/) for the latest version of vim with ruby support.
 
-### Dependencies
+## Dependencies
 
 * OSX 10.6
 * Homebrew

@@ -1,6 +1,0 @@
-# opens source from clipboard in vim, then removes temp file
-# and sticks back in clipboard
-pbpaste > tmp.html
-vim -c ":set filetype=html" -c ":%s///g" tmp.html
-cat tmp.html | pbcopy
-rm tmp.html

@@ -1,3 +1,7 @@
+echo -e "\033[38;5;148mupdate polka repo...\033[39m"
+cd ~/Projects/polka/
+git pull --rebase
+cd -
 echo -e "\033[38;5;148mupdate vim bundles...\033[39m"
 vim-bundle  
 

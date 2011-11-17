@@ -9,6 +9,7 @@ git
 hub
 libao
 libevent
+llvm
 macvim
 mad
 multimarkdown

@@ -1,0 +1,9 @@
+echo -e "\033[38;5;148mupdate vim bundles...\033[39m"
+vim-bundle  
+
+echo -e "\033[38;5;148mupdate brew recipies...\033[39m"
+brew update
+brew upgrade
+
+echo -e "\033[38;5;148mupdate the ruby gems...\033[39m"
+gem update

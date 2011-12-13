@@ -42,13 +42,9 @@ set wildmenu
 set scrolloff=3
 
 " Tab settings
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set ts=2
+set sw=2
 set expandtab
-
-" Show Whitespace
-set list listchars=tab:\ \ ,trail:·
 
 " Hud
 set ruler

@@ -2,6 +2,5 @@ alias la="ls -A"
 alias lt='ls -lhart'
 alias ll="ls -lsvAt"
 alias t="/usr/local/Cellar/todo-txt/2.8/bin/todo.sh"
-alias rr="rm -r"
 alias git="hub"
 alias serve="python -m SimpleHTTPServer 8080"

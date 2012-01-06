@@ -23,6 +23,7 @@ get_bundle godlygeek tabular
 get_bundle gregsexton MatchTag
 get_bundle kchmck vim-coffee-script
 get_bundle kien ctrlp.vim
+get_bundle mikewest vimroom
 get_bundle mileszs ack.vim
 get_bundle pangloss vim-javascript
 get_bundle scrooloose nerdtree

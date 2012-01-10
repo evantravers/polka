@@ -1,7 +1,7 @@
 #!/bin/sh
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
-mkdir -p "${HOME}/.vim/bundles"
+[ -d "${HOME}/.vim/bundles" ] || mkdir -p "${HOME}/.vim/bundles"
 cd "${HOME}/.vim/bundles"
 
 get_bundle() {
@@ -16,37 +16,11 @@ get_bundle() {
   )
 }
 
-get_bundle altercation vim-colors-solarized
-get_bundle davidoc todo.txt-vim
-get_bundle depuracao vim-rdoc
-get_bundle godlygeek tabular
-get_bundle gregsexton MatchTag
-get_bundle kchmck vim-coffee-script
-get_bundle kien ctrlp.vim
-get_bundle mikewest vimroom
-get_bundle mileszs ack.vim
-get_bundle pangloss vim-javascript
-get_bundle scrooloose nerdtree
-get_bundle tpope vim-abolish
-get_bundle tpope vim-bundler
-get_bundle tpope vim-cucumber
-get_bundle tpope vim-endwise
-get_bundle tpope vim-fugitive
-get_bundle tpope vim-git
-get_bundle tpope vim-haml
-get_bundle tpope vim-markdown
-get_bundle tpope vim-pathogen
-get_bundle tpope vim-ragtag
-get_bundle tpope vim-rails
-get_bundle tpope vim-rake
-get_bundle tpope vim-repeat
-get_bundle tpope vim-surround
-get_bundle tpope vim-unimpaired
-get_bundle vim-ruby vim-ruby
-get_bundle vim-scripts Command-T
-get_bundle vim-scripts UltiSnips
-get_bundle vim-scripts javacomplete
-get_bundle vim-scripts matchit.zip
-get_bundle vim-scripts taglist.vim
+# Read each ~/.vim/*.bundle file and install it
+for bundle in ${HOME}/.vim/*.bundle; do
+  while read owner project; do
+    get_bundle $owner $project
+  done < $bundle
+done
 
 vim -c 'call pathogen#helptags()|q'

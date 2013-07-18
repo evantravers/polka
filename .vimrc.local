@@ -22,6 +22,3 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 au FileType javascript setl conceallevel=2 concealcursor=nc
 let g:syntax_js=['function', 'return', 'solarized', 'this', 'proto']
-
-" make escape work sensibly
-set esckeys!

@@ -17,7 +17,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'duff/vim-scratch'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-endwise'
@@ -41,9 +41,20 @@ set encoding=utf-8
 
 " Color
 set t_Co=256
+let g:seoul256_background = 234
+colorscheme seoul256
 set background=dark
-colorscheme base16-default
 syntax on
+
+" Some color customizations
+hi VertSplit term=bold cterm=NONE ctermfg=0 ctermbg=black gui=NONE guifg=0 guibg=0
+hi NonText term=bold cterm=NONE ctermfg=11 ctermbg=NONE gui=NONE guifg=11 guibg=NONE
+set fillchars=vert:\│
+set nocursorline
+
+" Set up soft wrap for prose
+command! -nargs=* Wrap set wrap linebreak nolist
+let &showbreak='↪ '
 
 " Turn off error bells
 set noerrorbells

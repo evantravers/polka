@@ -1,0 +1,3 @@
+set -g status-position top
+
+bind-key S run-shell "tmux rename-session $(basename $(pwd))"

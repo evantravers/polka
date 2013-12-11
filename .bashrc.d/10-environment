@@ -31,4 +31,12 @@ fi
 
 prepend_path "${HOME}/bin"
 
+# pip
+append_path "/usr/local/share/python"
+# npm
+append_path "/usr/local/share/npm/bin"
+# go
+export GOPATH="${HOME}/go"
+append_path "${GOPATH}/bin"
+
 export EDITOR CLICOLOR HISTSIZE HISTCONTROL

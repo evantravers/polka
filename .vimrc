@@ -51,7 +51,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'duff/vim-scratch'
 NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'dhruvasagar/vim-railscasts-theme'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'rizzatti/dash.vim'
@@ -88,7 +88,6 @@ hi Normal ctermbg=NONE
 hi VertSplit term=bold cterm=NONE ctermfg=0 ctermbg=black gui=NONE guifg=0 guibg=0
 hi NonText term=bold cterm=NONE ctermfg=11 ctermbg=NONE gui=NONE guifg=11 guibg=NONE
 set fillchars=vert:\│
-set nocursorline
 set colorcolumn=80
 
 " airline
@@ -126,7 +125,6 @@ set esckeys!
 " Hud
 set ruler
 set number
-set cursorline
 set laststatus=2 " Always show status bar
 set nowrap
 
@@ -184,7 +182,7 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ '\.git/',
       \ '\.tmp/',
       \ '\tmp',
-      \ '\build',
+      \ 'build',
       \ '.|*cache*/',
       \ ], '\|'))
 

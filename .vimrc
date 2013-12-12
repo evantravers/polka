@@ -50,8 +50,8 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'duff/vim-scratch'
-NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'dhruvasagar/vim-railscasts-theme'
+NeoBundle 'https://raw.github.com/garybernhardt/dotfiles/master/.vim/colors/grb256.vim',
+      \ {'script_type' : 'colors'}
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'rizzatti/dash.vim'
@@ -78,7 +78,7 @@ set encoding=utf-8
 " Color
 set t_Co=256
 set background=dark
-colorscheme railscasts
+colorscheme grb256
 syntax on
 
 " use the terminal's background

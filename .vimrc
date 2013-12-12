@@ -83,14 +83,14 @@ set background=dark
 colorscheme jellybeans
 syntax on
 
-" use the terminal's background
-hi Normal ctermbg=NONE
-
 " Some color customizations
-hi VertSplit term=bold cterm=NONE ctermfg=0 ctermbg=black gui=NONE guifg=0 guibg=0
-hi NonText term=bold cterm=NONE ctermfg=11 ctermbg=NONE gui=NONE guifg=11 guibg=NONE
 set fillchars=vert:\│
 set colorcolumn=80
+
+hi Normal ctermbg=NONE
+hi SignColumn ctermbg=NONE
+hi ColorColumn ctermbg=6
+hi LineNr ctermbg=NONE
 
 " airline
 let g:airline_powerline_fonts=1

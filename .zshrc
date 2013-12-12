@@ -76,7 +76,16 @@ git_prompt_info () {
 eval "$(rbenv init --no-rehash - zsh)"
 
 # use fasd
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp)"
+if [ $commands[fasd] ]; then # check if fasd is installed
+  fasd_cache="$HOME/.fasd-init-cache"
+  if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+    fasd --init auto >| "$fasd_cache"
+  fi
+  source "$fasd_cache"
+  unset fasd_cache
+  alias v='f -e vim'
+  alias o='a -e open'
+fi
 
 # use emacs bindings
 bindkey -e

@@ -99,5 +99,15 @@ alias ls="gls --color=auto"
 # prompt customization
 # ====================
 
-PROMPT="%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}
-❯ "
+# git
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*' formats "in %{$fg[magenta]%}%b%{$reset_color%} %m%u%c"
+precmd() {
+  vcs_info
+}
+
+setopt prompt_subst
+PROMPT='%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%} ${vcs_info_msg_0_}
+❯ '

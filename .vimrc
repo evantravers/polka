@@ -88,13 +88,15 @@ set fillchars=vert:\│
 set colorcolumn=80
 
 hi Normal ctermbg=NONE
+hi NonText ctermbg=NONE
 hi SignColumn ctermbg=NONE
-hi ColorColumn ctermbg=6
+hi ColorColumn ctermbg=0
 hi LineNr ctermbg=NONE
+hi VertSplit term=bold cterm=NONE ctermfg=8 ctermbg=8 gui=NONE guifg=0 guibg=0
 
 " airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
+let g:airline_theme='dark'
 let g:bufferline_echo = 0
 
 " Turn off error bells

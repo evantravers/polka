@@ -1,7 +1,12 @@
+# load plugins
 autoload -U colors; colors
+# colored prompt
 autoload -U promptinit; promptinit
-autoload -U compinit; compinit
+autoload -Uz vzs_info
 
+# enable autocompletion
+autoload -U compinit; compinit
+zstyle ':completion:*' menu select
 setopt completealiases
 
 typeset -U path
@@ -18,62 +23,27 @@ path=(
   /sbin
   /usr/X11/bin
   $(brew --cellar)/python
+  $(brew --cellar)/npm/bin
 )
-
-# git prompt, yo
-git_prompt_info () {
-  local g="$(git rev-parse --git-dir 2>/dev/null)"
-  if [ -n "$g" ]; then
-    local r
-    local b
-    local d
-    local s
-    # Rebasing
-    if [ -d "$g/rebase-apply" ] ; then
-      if test -f "$g/rebase-apply/rebasing" ; then
-        r="|REBASE"
-      fi
-      b="$(git symbolic-ref HEAD 2>/dev/null)"
-    # Interactive rebase
-    elif [ -f "$g/rebase-merge/interactive" ] ; then
-      r="|REBASE-i"
-      b="$(cat "$g/rebase-merge/head-name")"
-    # Merging
-    elif [ -f "$g/MERGE_HEAD" ] ; then
-      r="|MERGING"
-      b="$(git symbolic-ref HEAD 2>/dev/null)"
-    else
-      if [ -f "$g/BISECT_LOG" ] ; then
-        r="|BISECTING"
-      fi
-      if ! b="$(git symbolic-ref HEAD 2>/dev/null)" ; then
-        if ! b="$(git describe --exact-match HEAD 2>/dev/null)" ; then
-          b="$(cut -c1-7 "$g/HEAD")..."
-        fi
-      fi
-    fi
-
-    # Dirty Branch
-    local newfile='?? '
-    if [ -n "$ZSH_VERSION" ]; then
-      newfile='\?\? '
-    fi
-    d=''
-    s=$(git status --porcelain 2> /dev/null)
-    [[ $s =~ "$newfile" ]] && d+="+"
-    [[ $s =~ "M " ]] && d+="*"
-    [[ $s =~ "D " ]] && d+="-"
-
-    if [ -n "${1-}" ]; then
-      printf "$1" "${b##refs/heads/}${r}${d}"
-    else
-      printf "on %s" "${b##refs/heads/}${r}${d}"
-    fi
-  fi
-}
 
 # set yo rubies son
 eval "$(rbenv init --no-rehash - zsh)"
+
+# use emacs bindings
+bindkey -e
+
+# remember history between sessions
+HISTSIZE=1000
+if (( ! EUID )); then
+  HISTFILE=~/.history_root
+else
+  HISTFILE=~/.history
+fi
+SAVEHIST=1000
+
+# ====================
+# bindings and aliases
+# ====================
 
 # use fasd
 if [ $commands[fasd] ]; then # check if fasd is installed
@@ -87,8 +57,47 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   alias o='a -e open'
 fi
 
-# use emacs bindings
-bindkey -e
+alias la="ls -A"
+alias lt='ls -lhart'
+alias ll="ls -lsvAt"
+alias git="hub"
 
-export PS1="%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%n%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%} $(git_prompt_info)
+# start stop pg
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
+
+# mongo
+alias mongorun="mongod run --config /usr/local/etc/mongod.conf"
+alias engage="play -n -c1 synth whitenoise band -n 100 20 band -n 50 20 gain +25  fade h 1 864000 1"
+
+# simple server
+alias serve="python -m SimpleHTTPServer"
+
+# ====================
+# program settings
+# ====================
+
+ACK_PAGER="less -FXR"
+export ACK_PAGER
+
+LESS="-FXR"
+export LESS
+
+EDITOR="vim"
+CLICOLOR=1
+
+VISUAL="$EDITOR"
+FCEDIT="$EDITOR"
+GIT_EDITOR="$EDITOR"
+GEM_EDITOR="$EDITOR"
+
+export FCEDIT VISUAL GIT_EDITOR GEM_EDITOR
+
+alias ls="gls --color=auto"
+
+# ====================
+# prompt customization
+# ====================
+
+export PROMPT="%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}
 ❯ "

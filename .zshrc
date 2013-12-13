@@ -99,5 +99,5 @@ alias ls="gls --color=auto"
 # prompt customization
 # ====================
 
-export PROMPT="%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}
+PROMPT="%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%}
 ❯ "

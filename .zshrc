@@ -103,7 +103,7 @@ alias ls="gls --color=auto"
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "in %{$fg[magenta]%}%b%{$reset_color%}%m%u%c"
+zstyle ':vcs_info:git*' formats "in %{$fg[magenta]%}%b%{$reset_color%}%a%m%u%c"
 zstyle ':vcs_info:*' stagedstr " %{$fg[green]%}●%{$reset_color%}"
 zstyle ':vcs_info:*' unstagedstr " %{$fg[red]%}✚%{$reset_color%}"
 precmd() {

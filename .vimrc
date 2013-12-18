@@ -90,9 +90,9 @@ set colorcolumn=80
 hi Normal ctermbg=NONE
 hi NonText ctermbg=NONE
 hi SignColumn ctermbg=NONE
-hi ColorColumn ctermbg=0
+hi ColorColumn ctermbg=235
 hi LineNr ctermbg=NONE
-hi VertSplit term=bold cterm=NONE ctermfg=8 ctermbg=8 gui=NONE guifg=0 guibg=0
+hi VertSplit term=bold cterm=NONE ctermfg=234 ctermbg=234 gui=NONE guifg=0 guibg=0
 
 " airline
 let g:airline_powerline_fonts=1

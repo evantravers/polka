@@ -65,6 +65,7 @@ NeoBundle 'tpope/vim-ragtag'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'tpope/vim-rails'
 
 " Load plugins now
 

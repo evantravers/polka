@@ -64,8 +64,10 @@ NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-ragtag'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " Load plugins now
 

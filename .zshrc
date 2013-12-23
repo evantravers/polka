@@ -9,6 +9,9 @@ autoload -U compinit; compinit
 zstyle ':completion:*' menu select
 setopt completealiases
 
+# enable comments via #
+setopt interactivecomments
+
 typeset -U path
 
 # paths are for winners

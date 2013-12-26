@@ -83,7 +83,7 @@ alias serve="python -m SimpleHTTPServer"
 ACK_PAGER="less"
 export ACK_PAGER
 
-LESS="-FXRN"
+LESS="-FXR"
 export LESS
 
 EDITOR="vim"

@@ -17,7 +17,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle "Lokaltog/vim-easymotion"
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/vimshell.vim"
 NeoBundle "SirVer/ultisnips"
@@ -174,7 +173,7 @@ if executable('ag')
 endif
 
 " file search
-nnoremap <C-p> :Unite -no-split file_rec/async<cr>
+nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
 " content search
 nnoremap <space>/ :Unite grep:.<cr>
 " yank history

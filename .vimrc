@@ -192,6 +192,9 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ '\.tmp/',
       \ '\tmp',
       \ 'build',
+      \ 'images',
+      \ 'wp-admin',
+      \ 'wp-includes',
       \ '.|*cache*/',
       \ ], '\|'))
 
@@ -242,7 +245,7 @@ nnoremap <localleader>/ :nohlsearch<CR>
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
 " Set up soft wrap for prose
-command! -nargs=* Wrap set wrap linebreak nolist
+command! -nargs=* Wrap set wrap linebreak nolist spell
 let &showbreak='↪ '
 
 " Check for missing packages

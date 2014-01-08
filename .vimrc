@@ -33,6 +33,7 @@ NeoBundle "bling/vim-airline"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "golangtw/gocode.vim"
 NeoBundle "gregsexton/MatchTag"
+NeoBundle "guns/vim-clojure-static"
 NeoBundle "hail2u/vim-css3-syntax"
 NeoBundle "juvenn/mustache.vim"
 NeoBundle "mattn/emmet-vim"
@@ -43,10 +44,12 @@ NeoBundle "sgur/unite-git_grep"
 NeoBundle "slim-template/vim-slim"
 NeoBundle "tpope/vim-abolish"
 NeoBundle "tpope/vim-eunuch"
+NeoBundle "tpope/vim-fireplace"
 NeoBundle "tpope/vim-speeddating"
 NeoBundle "uggedal/go-vim"
 NeoBundle "vim-scripts/Gundo"
 NeoBundle "vim-scripts/php.vim"
+NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'cseelus/vim-colors-clearance'
 NeoBundle 'dhruvasagar/vim-railscasts-theme'

@@ -20,6 +20,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/vimshell.vim"
 NeoBundle "SirVer/ultisnips"
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 NeoBundle "airblade/vim-gitgutter"
 NeoBundle "bling/vim-airline"
 NeoBundle "editorconfig/editorconfig-vim"
@@ -27,7 +35,6 @@ NeoBundle "golangtw/gocode.vim"
 NeoBundle "gregsexton/MatchTag"
 NeoBundle "hail2u/vim-css3-syntax"
 NeoBundle "juvenn/mustache.vim"
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle "mattn/emmet-vim"
 NeoBundle "mattn/gist-vim"
 NeoBundle "mattn/webapi-vim"
@@ -40,33 +47,26 @@ NeoBundle "tpope/vim-speeddating"
 NeoBundle "uggedal/go-vim"
 NeoBundle "vim-scripts/Gundo"
 NeoBundle "vim-scripts/php.vim"
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-NeoBundle 'duff/vim-scratch'
-NeoBundle 'dhruvasagar/vim-railscasts-theme'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'cseelus/vim-colors-clearance'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'dhruvasagar/vim-railscasts-theme'
+NeoBundle 'duff/vim-scratch'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mklabs/grunt.vim'
+NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'w0ng/vim-hybrid'
 
 " Load plugins now
 

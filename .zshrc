@@ -114,5 +114,5 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%~%{$reset_color%} ${vcs_info_msg_0_}
+PROMPT='%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}${PWD/#$HOME/~}%{$reset_color%} ${vcs_info_msg_0_}
 ❯ '

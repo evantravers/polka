@@ -70,6 +70,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'wellle/targets.vim'
 NeoBundle 'w0ng/vim-hybrid'
 
 " Load plugins now

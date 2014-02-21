@@ -35,6 +35,7 @@ NeoBundle "golangtw/gocode.vim"
 NeoBundle "gregsexton/MatchTag"
 NeoBundle "guns/vim-clojure-static"
 NeoBundle "hail2u/vim-css3-syntax"
+NeoBundle "junegunn/goyo.vim"
 NeoBundle "justinmk/vim-sneak"
 NeoBundle "juvenn/mustache.vim"
 NeoBundle "mattn/emmet-vim"
@@ -50,11 +51,9 @@ NeoBundle "tpope/vim-speeddating"
 NeoBundle "uggedal/go-vim"
 NeoBundle "vim-scripts/Gundo"
 NeoBundle "vim-scripts/php.vim"
-NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'cseelus/vim-colors-clearance'
-NeoBundle 'dhruvasagar/vim-railscasts-theme'
 NeoBundle 'duff/vim-scratch'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mklabs/grunt.vim'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -71,7 +70,6 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'wellle/targets.vim'
-NeoBundle 'w0ng/vim-hybrid'
 
 " Load plugins now
 

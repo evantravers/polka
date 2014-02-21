@@ -30,7 +30,8 @@ path=(
   /sbin
   /usr/X11/bin
   $(brew --cellar)/python
-  $(brew --cellar)/npm/bin
+  /usr/local/share/npm/bin
+  /usr/local/npm/bin
 )
 
 # set yo rubies son

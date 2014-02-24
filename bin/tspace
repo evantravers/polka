@@ -6,4 +6,5 @@
 TARGET_DIR=$(fasd -d $@)
 TARGET_NAME=$(basename "$TARGET_DIR")
 TMUX=
-tmux attach -t "$TARGET_NAME" || tmux new -s "$TARGET_NAME" -c "$TARGET_DIR"
+tmux new -d -s "$TARGET_NAME" -c "$TARGET_DIR"
+tmux switchc -t "$TARGET_NAME"

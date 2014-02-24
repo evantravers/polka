@@ -1,6 +1,9 @@
 #!/bin/bash
 # -polka-
 
-# this is for setting up a session in tmux
-tmux set default-path $(pwd)
-tmux rename-session $(basename $(pwd))
+# this is for setting up a workspace in tmux
+
+TARGET_DIR=$(fasd -d $@)
+TARGET_NAME=$(basename $TARGET_DIR)
+TMUX=
+tmux attach -t $TARGET_NAME || tmux new -s $TARGET_NAME -c $TARGET_DIR

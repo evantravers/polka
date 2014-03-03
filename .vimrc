@@ -71,6 +71,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'wellle/targets.vim'
+NeoBundle 'zhaocai/GoldenView.Vim'
 
 " Load plugins now
 
@@ -165,6 +166,17 @@ if (has('gui_running'))
   set guioptions-=T
   set guioptions-=m
 endif
+"
+"=============================================
+" GoldenView.vim
+"=============================================
+
+let g:goldenview__enable_default_mapping = 0
+
+map <localleader>s <Plug>GoldenViewSplit
+
+nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
+nmap <silent> <S-F8> <Plug>GoldenViewSwitchToggle
 
 "=============================================
 " Unite.vim

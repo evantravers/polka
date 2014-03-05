@@ -166,53 +166,6 @@ if (has('gui_running'))
   set guioptions-=T
   set guioptions-=m
 endif
-"
-"=============================================
-" GoldenView.vim
-"=============================================
-
-let g:goldenview__enable_default_mapping = 0
-
-map <localleader>s <Plug>GoldenViewSplit
-
-nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
-nmap <silent> <S-F8> <Plug>GoldenViewSwitchToggle
-
-"=============================================
-" Unite.vim
-"=============================================
-
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-
-  let g:unite_source_rec_async_command = 'ag -i --nocolor --nogroup --ignore --ignore ''.git'' --ignore ''.bzr'' --ignore ''node_modules'' --hidden -g ""'
-endif
-
-
-" file search
-nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
-" content search
-nnoremap <space>/ :Unite grep:.<cr>
-" yank history
-let g:unite_source_history_yank_enable = 1
-nnoremap <space>y :Unite history/yank<cr>
-" buffer switch
-nnoremap <space>s :Unite -quick-match -auto-preview buffer<cr>
-
-" ignore certain directories in unite
-call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
-      \ 'ignore_pattern', join([
-      \ '\.git/',
-      \ '\.tmp/',
-      \ '\tmp',
-      \ 'build',
-      \ 'images',
-      \ 'wp-admin',
-      \ 'wp-includes',
-      \ '.|*cache*/',
-      \ ], '\|'))
 
 "=============================================
 " Remaps
@@ -266,3 +219,50 @@ let &showbreak='↪ '
 
 " Check for missing packages
 NeoBundleCheck
+
+"=============================================
+" GoldenView.vim
+"=============================================
+
+let g:goldenview__enable_default_mapping = 0
+
+nmap <localleader>s <Plug>GoldenViewSplit
+
+nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
+nmap <silent> [34~ <Plug>GoldenViewSwitchToggle
+
+"=============================================
+" Unite.vim
+"=============================================
+
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+
+  let g:unite_source_rec_async_command = 'ag -i --nocolor --nogroup --ignore --ignore ''.git'' --ignore ''.bzr'' --ignore ''node_modules'' --hidden -g ""'
+endif
+
+
+" file search
+nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
+" content search
+nnoremap <space>/ :Unite grep:.<cr>
+" yank history
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
+" buffer switch
+nnoremap <space>s :Unite -quick-match -auto-preview buffer<cr>
+
+" ignore certain directories in unite
+call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+      \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ '\.tmp/',
+      \ '\tmp',
+      \ 'build',
+      \ 'images',
+      \ 'wp-admin',
+      \ 'wp-includes',
+      \ '.|*cache*/',
+      \ ], '\|'))

@@ -57,6 +57,7 @@ NeoBundle 'tpope/vim-ragtag'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-vinegar'
 NeoBundle "uggedal/go-vim"
 NeoBundle "vim-scripts/Gundo"
 NeoBundle "vim-scripts/php.vim"

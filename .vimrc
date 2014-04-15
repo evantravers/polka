@@ -66,8 +66,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'rizzatti/dash.vim'
-NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'wellle/targets.vim'
@@ -190,9 +188,6 @@ endw
 
 " use gundo.vim
 nnoremap <F3> :GundoToggle<CR>
-
-" use dash plugin
-nnoremap <F1> :Dash<CR>
 
 " prevent syntastic from checking html constantly
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }

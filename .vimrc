@@ -17,9 +17,9 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle "Shougo/unite.vim"
-NeoBundle "Shougo/vimshell.vim"
-NeoBundle "SirVer/ultisnips"
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
@@ -28,27 +28,27 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle "airblade/vim-gitgutter"
-NeoBundle "bling/vim-airline"
-NeoBundle "editorconfig/editorconfig-vim"
-NeoBundle "golangtw/gocode.vim"
-NeoBundle "gregsexton/MatchTag"
-NeoBundle "guns/vim-clojure-static"
-NeoBundle "hail2u/vim-css3-syntax"
-NeoBundle "honza/vim-snippets"
-NeoBundle "jaxbot/github-issues.vim"
-NeoBundle "justinmk/vim-sneak"
-NeoBundle "juvenn/mustache.vim"
-NeoBundle "mattn/emmet-vim"
-NeoBundle "mattn/gist-vim"
-NeoBundle "mattn/webapi-vim"
-NeoBundle "scrooloose/syntastic"
-NeoBundle "slim-template/vim-slim"
-NeoBundle "tpope/vim-abolish"
-NeoBundle "tpope/vim-eunuch"
-NeoBundle "tpope/vim-fireplace"
-NeoBundle "tpope/vim-speeddating"
-NeoBundle "tpope/vim-unimpaired"
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'golangtw/gocode.vim'
+NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'jaxbot/github-issues.vim'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
@@ -58,9 +58,9 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
-NeoBundle "uggedal/go-vim"
-NeoBundle "vim-scripts/Gundo"
-NeoBundle "vim-scripts/php.vim"
+NeoBundle 'uggedal/go-vim'
+NeoBundle 'vim-scripts/Gundo'
+NeoBundle 'vim-scripts/php.vim'
 NeoBundle 'duff/vim-scratch'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/rainbow_parentheses.vim'

@@ -1,15 +1,5 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
 # -polka-
 
-if [[ -d "${HOME}/.rubies" ]]; then
-  # CHRUBY
-  source "$(brew --prefix chruby)/share/chruby/chruby.sh"
-elif [[ -d "${HOME}/.rbenv" ]]; then
-  # RBENV
-  prepend_path "${HOME}/.rbenv/shims" "${HOME}/.rbenv/bin"
-  eval "$(rbenv init -)"
-elif [[ -d "${HOME}/.rvm" ]]; then
-  # RVM
-  [[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm" # Load RVM function
-  [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-fi
+
+source "source /usr/local/opt/chruby/share/chruby/chruby.sh"

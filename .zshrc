@@ -35,7 +35,8 @@ path=(
 )
 
 # set yo rubies son
-eval "$(rbenv init --no-rehash - zsh)"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 # use emacs bindings
 bindkey -e

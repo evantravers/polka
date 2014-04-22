@@ -30,6 +30,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'dsawardekar/wordpress.vim'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'golangtw/gocode.vim'
 NeoBundle 'gregsexton/MatchTag'

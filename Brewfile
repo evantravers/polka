@@ -8,6 +8,7 @@ install ack
 install apple-gcc42
 install bash
 install bash-completion
+install chruby
 install cmake
 install coreutils
 install ctags
@@ -24,7 +25,6 @@ install node
 install pianobar
 install python
 install python3
-install rbenv
 install readline
 install reattach-to-user-namespace
 install rename

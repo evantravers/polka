@@ -39,9 +39,11 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tpope/vim-abolish'
@@ -262,3 +264,12 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ 'wp-includes',
       \ '.|*cache*/',
       \ ], '\|'))
+
+" enable tagbar toggle
+nmap <F9> :TagbarToggle<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)

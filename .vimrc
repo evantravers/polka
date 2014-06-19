@@ -243,7 +243,7 @@ endif
 
 
 " file search
-nnoremap <C-p> :Unite -no-split -start-insert file_rec/git:!<cr>
+nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
 " content search
 nnoremap <space>/ :Unite grep:.<cr>
 " yank history

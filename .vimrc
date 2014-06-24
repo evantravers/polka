@@ -28,6 +28,8 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
+NeoBundle '1995eaton/vim-better-css-completion'
+NeoBundle '1995eaton/vim-better-javascript-completion'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'dsawardekar/wordpress.vim'

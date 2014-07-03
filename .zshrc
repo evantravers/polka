@@ -106,7 +106,7 @@ alias ls="gls --color=auto"
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "in %{$fg[magenta]%}%b%{$reset_color%}%a%m%u%c"
+zstyle ':vcs_info:git*' formats "on %{$fg[magenta]%}%b%{$reset_color%}%a%m%u%c"
 zstyle ':vcs_info:*' stagedstr " %{$fg[green]%}●%{$reset_color%}"
 zstyle ':vcs_info:*' unstagedstr " %{$fg[red]%}✚%{$reset_color%}"
 precmd() {
@@ -114,7 +114,7 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[red]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}%2/%{$reset_color%} ${vcs_info_msg_0_}
+PROMPT='%{$fg[red]%}%n%{$reset_color%} at %{$fg[green]%}%m%{$reset_color%} in %{$fg[cyan]%}%2/%{$reset_color%} ${vcs_info_msg_0_}
 ❯ '
 
 # ====================

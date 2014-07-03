@@ -41,6 +41,9 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'junegunn/goyo.vim'
+NeoBundle 'junegunn/limelight.vim'
+NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/gist-vim'
@@ -89,24 +92,17 @@ set encoding=utf-8
 
 " Color
 set t_Co=256
-set background=dark
-colorscheme jellybeans
+colorscheme seoul256
+set background=light
 syntax on
 
 " Some color customizations
 set fillchars=vert:\│
 set colorcolumn=80
 
-hi Normal ctermbg=NONE
-hi NonText ctermbg=NONE
-hi SignColumn ctermbg=NONE
-hi ColorColumn ctermbg=235
-hi LineNr ctermbg=NONE
-hi VertSplit term=bold cterm=NONE ctermfg=234 ctermbg=234 gui=NONE guifg=0 guibg=0
-
 " airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
+let g:airline_theme='sol'
 let g:bufferline_echo = 0
 
 " Turn off error bells
@@ -275,3 +271,18 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
+
+" Configure Limelight and Goyo
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+function! GoyoBefore()
+  Limelight
+endfunction
+
+function! GoyoAfter()
+  Limelight!
+endfunction
+
+let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+nnoremap <Leader>m :Goyo<CR>

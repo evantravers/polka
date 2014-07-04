@@ -100,6 +100,10 @@ syntax on
 set fillchars=vert:\│
 set colorcolumn=80
 
+" Use sane colors for git commits
+hi diffAdded ctermfg=2
+hi diffRemoved ctermfg=1
+
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='sol'

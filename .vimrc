@@ -213,6 +213,13 @@ nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 command! -nargs=* Wrap set wrap linebreak nolist spell
 let &showbreak='↪ '
 
+" Toggle paste mode
+set pastetoggle=<leader>z
+
+" Fancy macros
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
+
 " Check for missing packages
 NeoBundleCheck
 

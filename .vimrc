@@ -30,6 +30,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle '1995eaton/vim-better-css-completion'
 NeoBundle '1995eaton/vim-better-javascript-completion'
+NeoBundle 'AndrewRadev/gapply.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'dsawardekar/wordpress.vim'

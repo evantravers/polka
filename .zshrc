@@ -265,6 +265,3 @@ zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<-
 # colors
 LS_COLORS='rs=0:di=04;35:ln=01;';
 export LS_COLORS
-
-# syntax highlighting
-source ~/src/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -14,3 +14,4 @@
 --ignore-dir=public/system
 --ignore-dir=public/uploads
 --ignore-dir=log
+--ignore-dir=.sass-cache

@@ -132,6 +132,9 @@ set expandtab
 " make escape work sensibly
 set esckeys!
 
+" make visual block extend past line endings
+set virtualedit=block
+
 " Hud
 set ruler
 set number

@@ -46,10 +46,21 @@ NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'junegunn/limelight.vim'
 NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'marijnh/tern_for_vim', {
+      \ 'lazy': 1,
+      \ 'autoload': {
+      \   'filetypes': [
+      \       'javascript',
+      \   ],
+      \ },
+      \ 'build' : {
+      \     'mac' : 'npm install',
+      \ },
+      \ }
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
-NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tpope/vim-abolish'
@@ -67,6 +78,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'uggedal/go-vim'
+NeoBundle 'severin-lemaignan/vim-minimap'
 NeoBundle 'vim-scripts/Auto-Pairs'
 NeoBundle 'vim-scripts/Gundo'
 NeoBundle 'vim-scripts/matchit.zip'

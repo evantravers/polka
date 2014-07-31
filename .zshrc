@@ -17,6 +17,9 @@ typeset -U path
 # paths are for winners
 path=(
   /usr/local/{bin,sbin}/
+  $path
+)
+path=(
   ${HOME}/.rubies/bin
   ${HOME}/bin
   $(brew --prefix)/bin

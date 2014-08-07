@@ -1,12 +1,5 @@
 " -polka-
 
-" Start .vimrc
-if has('vim_starting')
-  set nocompatible
-endif
-
-scriptencoding utf-8
-
 "=============================================
 " Initialization
 "=============================================
@@ -59,6 +52,7 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -73,20 +67,14 @@ Plug 'zhaocai/GoldenView.Vim'
 
 call plug#end()
 
-filetype plugin indent on
-
 "=============================================
 " Options
 "=============================================
-
-" Enable utf-8
-set encoding=utf-8
 
 " Color
 set t_Co=256
 colorscheme seoul256
 set background=light
-syntax on
 
 " Some color customizations
 set fillchars=vert:\│
@@ -106,12 +94,10 @@ set t_vb=
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch
 
 " Tab completion
 set wildmode=list:longest,full
 set wildignore=*.swp,*.o,*.so,*.exe,*.dll
-set wildmenu
 
 " Scroll
 set scrolloff=3
@@ -128,9 +114,7 @@ set esckeys!
 set virtualedit=block
 
 " Hud
-set ruler
 set number
-set laststatus=2 " Always show status bar
 set nowrap
 
 " Visible whitespace
@@ -140,8 +124,6 @@ set list
 " Buffers
 set hidden
 
-" History
-set history=1000
 set undolevels=1000
 
 " Backup Directories
@@ -150,9 +132,6 @@ set directory=~/.vim/swaps,.
 if exists('&undodir')
   set undodir=~/.vim/undo,.
 endif
-
-" Fix backspace
-set backspace=indent,eol,start
 
 " GUI options
 if (has('gui_running'))
@@ -197,9 +176,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Turn off search highlight
-nnoremap <localleader>/ :nohlsearch<CR>
 
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``

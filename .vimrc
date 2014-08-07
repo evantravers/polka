@@ -14,7 +14,7 @@ scriptencoding utf-8
 call plug#begin('~/.vim/bundle')
 
 Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
-Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'js' }
+Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc', { 'do' : 'make -f make_mac.mak' }
@@ -25,6 +25,7 @@ Plug 'bling/vim-airline'
 Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
 Plug 'duff/vim-scratch'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'golangtw/gocode.vim', { 'for' : 'go' }
 Plug 'gregsexton/MatchTag'
 Plug 'guns/vim-clojure-static', { 'for' : 'clojure' }
@@ -40,12 +41,13 @@ Plug 'juvenn/mustache.vim', { 'for' : 'mustache' }
 Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug 'majutsushi/tagbar'
-Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'js' }
+Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
 Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/syntastic'
+Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'slim-template/vim-slim', { 'for' : 'slim' }
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -61,7 +63,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'uggedal/go-vim', { 'for' : 'go' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/Auto-Pairs'
 Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }

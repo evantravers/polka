@@ -10,7 +10,7 @@ Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc', { 'do' : 'make -f make_mac.mak' }
+Plug 'Shougo/vimproc', { 'do' : 'make' }
 Plug 'Shougo/vimshell.vim'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'

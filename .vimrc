@@ -1,113 +1,80 @@
 " -polka-
 
-" Start .vimrc
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-scriptencoding utf-8
-
 "=============================================
 " Initialization
 "=============================================
 
-" Load neobundle
-call neobundle#rc(expand('~/.vim/bundle/'))
+call plug#begin('~/.vim/bundle')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
+Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
+Plug 'AndrewRadev/gapply.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc', { 'do' : 'make' }
+Plug 'Shougo/vimshell.vim'
+Plug 'SirVer/ultisnips'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
+Plug 'duff/vim-scratch'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'for' : 'go' }
+Plug 'golangtw/gocode.vim', { 'for' : 'go' }
+Plug 'gregsexton/MatchTag'
+Plug 'guns/vim-clojure-static', { 'for' : 'clojure' }
+Plug 'hail2u/vim-css3-syntax'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/goyo.vim', { 'on' : 'Goyo' }
+Plug 'junegunn/limelight.vim', { 'on' : 'Goyo' }
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-plug'
+Plug 'justinmk/vim-sneak'
+Plug 'juvenn/mustache.vim', { 'for' : 'mustache' }
+Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript' }
+Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
+Plug 'majutsushi/tagbar'
+Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
+Plug 'mattn/emmet-vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/syntastic'
+Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
+Plug 'slim-template/vim-slim', { 'for' : 'slim' }
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/Auto-Pairs'
+Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/php.vim', { 'for' : 'php' }
+Plug 'wellle/targets.vim'
+Plug 'zhaocai/GoldenView.Vim'
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-NeoBundle '1995eaton/vim-better-css-completion'
-NeoBundle '1995eaton/vim-better-javascript-completion'
-NeoBundle 'AndrewRadev/gapply.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'dsawardekar/wordpress.vim'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'golangtw/gocode.vim'
-NeoBundle 'gregsexton/MatchTag'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'justinmk/vim-sneak'
-NeoBundle 'juvenn/mustache.vim'
-NeoBundle 'junegunn/goyo.vim'
-NeoBundle 'junegunn/limelight.vim'
-NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'marijnh/tern_for_vim', {
-      \ 'lazy': 1,
-      \ 'autoload': {
-      \   'filetypes': [
-      \       'javascript',
-      \   ],
-      \ },
-      \ 'build' : {
-      \     'mac' : 'npm install',
-      \ },
-      \ }
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'tpope/vim-eunuch'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-ragtag'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'uggedal/go-vim'
-NeoBundle 'severin-lemaignan/vim-minimap'
-NeoBundle 'vim-scripts/Auto-Pairs'
-NeoBundle 'vim-scripts/Gundo'
-NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'vim-scripts/php.vim'
-NeoBundle 'duff/vim-scratch'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'wellle/targets.vim'
-NeoBundle 'zhaocai/GoldenView.Vim'
-
-" Load plugins now
-
-filetype plugin indent on
+call plug#end()
 
 "=============================================
 " Options
 "=============================================
 
-" Enable utf-8
-set encoding=utf-8
-
 " Color
 set t_Co=256
 colorscheme seoul256
 set background=light
-syntax on
 
 " Some color customizations
 set fillchars=vert:\│
@@ -127,12 +94,10 @@ set t_vb=
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch
 
 " Tab completion
 set wildmode=list:longest,full
 set wildignore=*.swp,*.o,*.so,*.exe,*.dll
-set wildmenu
 
 " Scroll
 set scrolloff=3
@@ -149,9 +114,7 @@ set esckeys!
 set virtualedit=block
 
 " Hud
-set ruler
 set number
-set laststatus=2 " Always show status bar
 set nowrap
 
 " Visible whitespace
@@ -161,8 +124,6 @@ set list
 " Buffers
 set hidden
 
-" History
-set history=1000
 set undolevels=1000
 
 " Backup Directories
@@ -171,9 +132,6 @@ set directory=~/.vim/swaps,.
 if exists('&undodir')
   set undodir=~/.vim/undo,.
 endif
-
-" Fix backspace
-set backspace=indent,eol,start
 
 " GUI options
 if (has('gui_running'))
@@ -235,9 +193,6 @@ set pastetoggle=<leader>z
 " Fancy macros
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
-
-" Check for missing packages
-NeoBundleCheck
 
 "=============================================
 " GoldenView.vim
@@ -319,3 +274,6 @@ augroup RainbowParentheses
   " autocmd Syntax clojure RainbowParenthesesLoadChevrons
   autocmd VimEnter,BufRead,BufWinEnter,BufNewFile *.clj RainbowParenthesesActivate
 augroup END
+
+" Settings for phpcomplete.vim
+let g:phpcomplete_enhance_jump_to_definition = 0

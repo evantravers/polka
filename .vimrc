@@ -295,3 +295,6 @@ augroup RainbowParentheses
   " autocmd Syntax clojure RainbowParenthesesLoadChevrons
   autocmd VimEnter,BufRead,BufWinEnter,BufNewFile *.clj RainbowParenthesesActivate
 augroup END
+
+" Settings for phpcomplete.vim
+let g:phpcomplete_enhance_jump_to_definition = 0

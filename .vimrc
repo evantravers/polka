@@ -177,6 +177,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Turn off search highlight
+nnoremap <localleader>/ :nohlsearch<CR>
+
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 

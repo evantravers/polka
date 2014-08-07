@@ -309,3 +309,13 @@ endfunction
 
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 nnoremap <Leader>m :Goyo<CR>
+
+" Change some settings for clojure
+augroup RainbowParentheses
+  autocmd!
+  autocmd Syntax clojure RainbowParenthesesLoadRound
+  autocmd Syntax clojure RainbowParenthesesLoadSquare
+  autocmd Syntax clojure RainbowParenthesesLoadBraces
+  " autocmd Syntax clojure RainbowParenthesesLoadChevrons
+  autocmd VimEnter,BufRead,BufWinEnter,BufNewFile *.clj RainbowParenthesesActivate
+augroup END

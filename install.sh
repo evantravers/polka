@@ -41,8 +41,9 @@ done
 [ -d "${HOME}/.vim/swaps" ]   || mkdir -p "${HOME}/.vim/swaps"
 [ -d "${HOME}/.vim/undo" ]    || mkdir -p "${HOME}/.vim/undo"
 
-# Preload NeoBundle
-[ -d "${HOME}/.vim/bundle/neobundle.vim" ] || git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+# Preload vim-plug
+[ -d "${HOME}/.vim/autoload" ] || mkdir -p "${HOME}/.vim/autoload"
+[ -d "${HOME}/.vim/autoload/plug.vim" ] || wget "${HOME}/.vim/autoload/plug.vim" \ https://raw.github.com/junegunn/vim-plug/master/plug.vim
 
 # Remove broken symlinks
 find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1 -type l | xargs rm 2>/dev/null

@@ -283,3 +283,6 @@ let g:phpcomplete_enhance_jump_to_definition = 0
 augroup javascriptfiletype
   au BufRead,BufNewFile *.js.es6 setfiletype javascript
 augroup END
+
+" fancy tag lookup
+set tags=./tags;/,tags;/

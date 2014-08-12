@@ -24,6 +24,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'guns/vim-clojure-static', { 'for' : 'clojure' }
 Plug 'hail2u/vim-css3-syntax'
 Plug 'honza/vim-snippets'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'junegunn/goyo.vim', { 'on' : 'Goyo' }
 Plug 'junegunn/limelight.vim', { 'on' : 'Goyo' }
 Plug 'junegunn/seoul256.vim'
@@ -277,3 +278,8 @@ augroup END
 
 " Settings for phpcomplete.vim
 let g:phpcomplete_enhance_jump_to_definition = 0
+
+" enable es6
+augroup javascriptfiletype
+  au BufRead,BufNewFile *.js.es6 setfiletype javascript
+augroup END

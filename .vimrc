@@ -31,7 +31,6 @@ Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-sneak'
-Plug 'juvenn/mustache.vim', { 'for' : 'mustache' }
 Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug 'majutsushi/tagbar'
@@ -40,6 +39,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'slim-template/vim-slim', { 'for' : 'slim' }

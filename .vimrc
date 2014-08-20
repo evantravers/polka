@@ -286,8 +286,3 @@ augroup END
 
 " fancy tag lookup
 set tags=./tags;/,tags;/
-
-" make file completion relative to current file
-:set autochdir
-:autocmd InsertEnter * let save_cwd = getcwd() | set autochdir
-:autocmd InsertLeave * set noautochdir | execute 'cd' fnameescape(save_cwd)

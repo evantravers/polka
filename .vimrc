@@ -59,7 +59,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/Auto-Pairs'
 Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/php.vim', { 'for' : 'php' }

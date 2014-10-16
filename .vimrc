@@ -86,6 +86,12 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='sol'
 let g:bufferline_echo = 0
 
+" dark mode
+if &background == "dark"
+  let g:seoul256_background = 233
+  let g:airline_theme='bubblegum'
+endif
+
 " Turn off error bells
 set noerrorbells
 set visualbell

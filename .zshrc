@@ -265,3 +265,4 @@ zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<-
 # colors
 LS_COLORS='rs=0:di=04;35:ln=01;';
 export LS_COLORS
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

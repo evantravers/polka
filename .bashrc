@@ -17,3 +17,4 @@ load_bashrc()
 }
 
 load_bashrc
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

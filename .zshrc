@@ -114,7 +114,7 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[red]%}%n%{$reset_color%} at %{$fg[green]%}%m%{$reset_color%} in %{$fg[cyan]%}%2/%{$reset_color%} ${vcs_info_msg_0_}
+PROMPT='%{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[cyan]%}%2/%{$reset_color%} ${vcs_info_msg_0_}
 ❯ '
 
 # ====================
@@ -263,6 +263,6 @@ zstyle ':completion:*:(ssh|scp|rsync):*:hosts-domain' ignored-patterns '<->.<->.
 zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<->.<->.<->|(|::)([[:xdigit:].]##:(#c,2))##(|%*))' '127.0.0.<->' '255.255.255.255' '::1' 'fe80::*'
 
 # colors
-LS_COLORS='rs=0:di=04;35:ln=01;';
+# LS_COLORS='rs=0:di=04;35:ln=01;';
 export LS_COLORS
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -296,3 +296,6 @@ augroup END
 
 " fancy tag lookup
 set tags=./tags;/,tags;/
+
+" open quickfix after :Ggrep
+autocmd QuickFixCmdPost *grep* cwindow

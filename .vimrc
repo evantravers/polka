@@ -62,6 +62,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
+Plug 'Raimondi/delimitMate'
 Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'wellle/targets.vim'
 Plug 'zhaocai/GoldenView.Vim'

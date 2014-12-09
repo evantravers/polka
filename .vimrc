@@ -41,6 +41,8 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'Raimondi/delimitMate'
+Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'slim-template/vim-slim', { 'for' : 'slim' }
@@ -62,8 +64,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
-Plug 'Raimondi/delimitMate'
-Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'wellle/targets.vim'
 Plug 'zhaocai/GoldenView.Vim'
 

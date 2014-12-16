@@ -12,6 +12,11 @@ setopt completealiases
 # enable comments via #
 setopt interactivecomments
 
+# enable edit line
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 typeset -U path
 
 # paths are for winners

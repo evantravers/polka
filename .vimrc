@@ -42,7 +42,6 @@ Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
 Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
-Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'Raimondi/delimitMate'

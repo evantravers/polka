@@ -9,10 +9,13 @@ call plug#begin('~/.vim/bundle')
 Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
+Plug 'Raimondi/delimitMate'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc', { 'do' : 'make' }
 Plug 'Shougo/vimshell.vim'
 Plug 'SirVer/ultisnips'
+Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
+Plug 'Wolfy87/vim-enmasse'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
@@ -39,6 +42,7 @@ Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
 Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'Raimondi/delimitMate'

@@ -78,6 +78,8 @@ alias lt='ls -lhart'
 alias ll="ls -lsvAt"
 alias git="hub"
 
+alias vim="nvim"
+
 # simple server
 alias serve="python -m SimpleHTTPServer"
 
@@ -91,7 +93,7 @@ export ACK_PAGER
 LESS="-FXR"
 export LESS
 
-EDITOR="vim"
+EDITOR="nvim"
 CLICOLOR=1
 
 VISUAL="$EDITOR"

@@ -79,7 +79,7 @@ call plug#end()
 " Color
 set t_Co=256
 colorscheme seoul256
-set background=light
+set background=dark
 
 " Some color customizations
 set fillchars=vert:\│

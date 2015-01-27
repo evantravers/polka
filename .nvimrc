@@ -30,7 +30,7 @@ Plug 'honza/vim-snippets'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/goyo.vim', { 'on' : 'Goyo' }
-Plug 'junegunn/limelight.vim', { 'on' : 'Goyo' }
+Plug 'junegunn/limelight.vim', { 'on' : 'Limelight' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'

@@ -78,6 +78,7 @@ call plug#end()
 
 " Color
 set t_Co=256
+let g:seoul256_background = 235
 colorscheme seoul256
 set background=dark
 
@@ -92,11 +93,6 @@ let g:bufferline_echo = 0
 
 " dark mode
 if &background == "dark"
-  highlight Normal ctermbg     = NONE
-  highlight nonText ctermbg    = NONE
-  highlight SignColumn ctermbg = NONE
-  highlight LineNr ctermbg     = NONE
-
   let g:airline_theme='bubblegum'
 endif
 

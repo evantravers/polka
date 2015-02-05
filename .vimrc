@@ -65,7 +65,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }
+Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
 Plug 'wellle/targets.vim'
 Plug 'zhaocai/GoldenView.Vim'

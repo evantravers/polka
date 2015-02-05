@@ -37,6 +37,7 @@ Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-sneak'
 Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
+Plug 'kopischke/vim-fetch'
 Plug 'majutsushi/tagbar'
 Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
 Plug 'mattn/emmet-vim'
@@ -44,8 +45,6 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'Raimondi/delimitMate'
-Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'slim-template/vim-slim', { 'for' : 'slim' }
@@ -65,7 +64,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/Gundo', { 'on' : 'GundoToggle' }
+Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
 Plug 'wellle/targets.vim'
 Plug 'zhaocai/GoldenView.Vim'

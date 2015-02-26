@@ -47,6 +47,7 @@ Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
+Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
 Plug 'slim-template/vim-slim', { 'for' : 'slim' }
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -55,6 +56,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
@@ -64,7 +66,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
-Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
 Plug 'wellle/targets.vim'
 Plug 'zhaocai/GoldenView.Vim'
@@ -284,6 +285,9 @@ augroup RainbowParentheses
   " autocmd Syntax clojure RainbowParenthesesLoadChevrons
   autocmd VimEnter,BufRead,BufWinEnter,BufNewFile *.clj RainbowParenthesesActivate
 augroup END
+
+" enable fenced markdown files
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
 
 " Settings for phpcomplete.vim
 let g:phpcomplete_enhance_jump_to_definition = 0

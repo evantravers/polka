@@ -35,7 +35,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-sneak'
-Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript' }
+Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript,markdown' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug 'kopischke/vim-fetch'
 Plug 'majutsushi/tagbar'

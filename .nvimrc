@@ -21,6 +21,7 @@ Plug 'bling/vim-airline'
 Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
 Plug 'duff/vim-scratch'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'golangtw/gocode.vim', { 'for' : 'go' }
 Plug 'gregsexton/MatchTag'

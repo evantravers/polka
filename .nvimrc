@@ -46,6 +46,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'ryanoasis/vim-webdevicons'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }

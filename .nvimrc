@@ -45,6 +45,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
+Plug 'nanotech/jellybeans.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'scrooloose/syntastic'
@@ -79,14 +80,14 @@ call plug#end()
 "=============================================
 
 " Color
-set t_Co=256
-let g:seoul256_background = 235
-colorscheme seoul256
+" set t_Co=256
+" let g:seoul256_background = 235
+colorscheme jellybeans
 set background=dark
 
 " Some color customizations
-set fillchars=vert:\│
-set colorcolumn=80
+" set fillchars=vert:\│
+" set colorcolumn=80
 
 " airline
 let g:airline_powerline_fonts=1
@@ -95,7 +96,8 @@ let g:bufferline_echo = 0
 
 " dark mode
 if &background == "dark"
-  let g:airline_theme='bubblegum'
+  " let g:airline_theme='bubblegum'
+  let g:airline_theme='base16'
 endif
 
 " Turn off error bells
@@ -156,6 +158,11 @@ endif
 "=============================================
 " Remaps
 "=============================================
+
+" SILLINESS
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
 
 let mapleader=','
 let maplocalleader=','

@@ -52,6 +52,7 @@ Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
 Plug 'slim-template/vim-slim', { 'for' : 'slim' }
+Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -83,11 +84,11 @@ call plug#end()
 " set t_Co=256
 " let g:seoul256_background = 235
 colorscheme jellybeans
-set background=dark
+" set background=dark
 
 " Some color customizations
 " set fillchars=vert:\│
-" set colorcolumn=80
+set colorcolumn=80
 
 " airline
 let g:airline_powerline_fonts=1
@@ -95,10 +96,11 @@ let g:airline_theme='sol'
 let g:bufferline_echo = 0
 
 " dark mode
-if &background == "dark"
-  " let g:airline_theme='bubblegum'
-  let g:airline_theme='base16'
-endif
+" if &background == "dark"
+"   " let g:airline_theme='bubblegum'
+"   let g:airline_theme='base16'
+" endif
+let g:airline_theme='base16'
 
 " Turn off error bells
 set noerrorbells
@@ -202,6 +204,9 @@ nnoremap <localleader>/ :nohlsearch<CR>
 
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
+
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " Set up soft wrap for prose
 command! -nargs=* Wrap set wrap linebreak nolist spell

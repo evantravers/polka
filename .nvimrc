@@ -235,7 +235,7 @@ nmap <silent> [34~ <Plug>GoldenViewSwitchToggle
 "=============================================
 
 " file search
-nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
+" nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
 " content search
 nnoremap <space>/ :Unite grep:.<cr>
 " yank history
@@ -243,6 +243,12 @@ let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>
 " buffer switch
 nnoremap <space>s :Unite -quick-match -auto-preview buffer<cr>
+
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
 
 " ignore certain directories in unite
 call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',

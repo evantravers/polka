@@ -4,7 +4,7 @@
 " Initialization
 "=============================================
 
-call plug#begin('~/.nvim/bundle')
+call plug#begin('~/.config/nvim/bundle')
 
 Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
@@ -72,6 +72,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/matchit.zip'
 Plug 'wellle/targets.vim'
+Plug 'w0ng/vim-hybrid'
 Plug 'zhaocai/GoldenView.Vim'
 
 call plug#end()
@@ -83,8 +84,9 @@ call plug#end()
 " Color
 " set t_Co=256
 " let g:seoul256_background = 235
-colorscheme jellybeans
-" set background=dark
+let g:hybrid_use_Xresources = 1
+set background=dark
+colorscheme hybrid
 
 " Some color customizations
 " set fillchars=vert:\│
@@ -92,7 +94,6 @@ set colorcolumn=80
 
 " airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='sol'
 let g:bufferline_echo = 0
 
 " dark mode
@@ -144,10 +145,10 @@ set hidden
 set undolevels=1000
 
 " Backup Directories
-set backupdir=~/.nvim/backups,.
-set directory=~/.nvim/swaps,.
+set backupdir=~/.config/nvim/backups,.
+set directory=~/.config/nvim/swaps,.
 if exists('&undodir')
-  set undodir=~/.nvim/undo,.
+  set undodir=~/.config/nvim/undo,.
 endif
 
 " GUI options

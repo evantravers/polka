@@ -21,6 +21,12 @@ for dotfile in ${DIR}/.bashrc.d/*; do
     ln -fs $dotfile "${HOME}/.bashrc.d/$(basename $dotfile)"
 done
 
+# Link config directory
+[ -d "${HOME}/.config" ] || mkdir "${HOME}/.config"
+for dotfile in ${DIR}/.config/*; do
+    ln -fs $dotfile "${HOME}/.config/$(basename $dotfile)"
+done
+
 # Link files in bin
 [ -d "${HOME}/bin" ] || mkdir "${HOME}/bin"
 for file in ${DIR}/bin/*; do
@@ -36,14 +42,15 @@ for file in ${DIR}/lib/*; do
     ln -fs $file "${HOME}/lib/$(basename $file)"
 done
 
-[ -d "${HOME}/.vim/bundle" ] || mkdir -p "${HOME}/.vim/bundle"
-[ -d "${HOME}/.vim/backups" ] || mkdir -p "${HOME}/.vim/backups"
-[ -d "${HOME}/.vim/swaps" ]   || mkdir -p "${HOME}/.vim/swaps"
-[ -d "${HOME}/.vim/undo" ]    || mkdir -p "${HOME}/.vim/undo"
+[ -d "${HOME}/.config/nvim/bundle" ] || mkdir -p "${HOME}/.config/nvim/bundle"
+[ -d "${HOME}/.config/nvim/backups" ] || mkdir -p "${HOME}/.config/nvim/backups"
+[ -d "${HOME}/.config/nvim/swaps" ]   || mkdir -p "${HOME}/.config/nvim/swaps"
+[ -d "${HOME}/.config/nvim/undo" ]    || mkdir -p "${HOME}/.config/nvim/undo"
 
 # Preload vim-plug
-[ -d "${HOME}/.vim/autoload" ] || mkdir -p "${HOME}/.vim/autoload"
-[ -d "${HOME}/.vim/autoload/plug.vim" ] || wget "${HOME}/.vim/autoload/plug.vim" \ https://raw.github.com/junegunn/vim-plug/master/plug.vim
+[ -d "${HOME}/.config/nvim/autoload" ] || mkdir -p "${HOME}/.config/nvim/autoload"
+echo "Loading Plug.vim for NeoVim..."
+[ -d "${HOME}/.vim/autoload/plug.vim" ] || curl -fLo "${HOME}/.config/nvim/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Remove broken symlinks
 find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1 -type l | xargs rm 2>/dev/null

@@ -101,7 +101,7 @@ let g:bufferline_echo = 0
 "   " let g:airline_theme='bubblegum'
 "   let g:airline_theme='base16'
 " endif
-let g:airline_theme='base16'
+let g:airline_theme='hybrid'
 
 " Turn off error bells
 set noerrorbells

@@ -113,7 +113,6 @@ let g:airline_theme='bubblegum'
 " Turn off error bells
 set noerrorbells
 set visualbell
-set t_vb=
 
 " Search
 set ignorecase

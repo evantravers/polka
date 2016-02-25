@@ -45,7 +45,6 @@ Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
-Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-rfc'
 Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' } " optional syntax highlighting for RFC files
 Plug 'mustache/vim-mustache-handlebars'

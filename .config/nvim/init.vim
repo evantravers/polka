@@ -10,9 +10,6 @@ Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc', { 'do' : 'make' }
-Plug 'Shougo/vimshell.vim'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'Wolfy87/vim-enmasse'
@@ -32,11 +29,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim', { 'on' : 'Goyo' }
 Plug 'junegunn/limelight.vim', { 'on' : 'Limelight' }
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-sneak'
-Plug 'kchmck/vim-coffee-script', { 'for' : 'coffee' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug 'kopischke/vim-fetch'
 Plug 'majutsushi/tagbar'
@@ -48,12 +43,10 @@ Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-rfc'
 Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' } " optional syntax highlighting for RFC files
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'nanotech/jellybeans.vim'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
 Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
-Plug 'slim-template/vim-slim', { 'for' : 'slim' }
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -228,38 +221,11 @@ nmap <localleader>s <Plug>GoldenViewSplit
 nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
 nmap <silent> [34~ <Plug>GoldenViewSwitchToggle
 
-"=============================================
-" Unite.vim
-"=============================================
-
-" file search
-" nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
-" content search
-nnoremap <space>/ :Unite grep:.<cr>
-" yank history
-let g:unite_source_history_yank_enable = 1
-nnoremap <space>y :Unite history/yank<cr>
-" buffer switch
-nnoremap <space>s :Unite -quick-match -auto-preview buffer<cr>
-
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vsplit'
       \ }
 nnoremap <c-p> :FZF<cr>
-
-" ignore certain directories in unite
-call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
-      \ 'ignore_pattern', join([
-      \ '\.git/',
-      \ '\.tmp/',
-      \ '\tmp',
-      \ 'build',
-      \ 'images',
-      \ 'wp-admin',
-      \ 'wp-includes',
-      \ '.|*cache*/',
-      \ ], '\|'))
 
 " enable tagbar toggle
 nmap <F9> :TagbarToggle<CR>

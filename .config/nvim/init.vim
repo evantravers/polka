@@ -94,6 +94,7 @@ set colorcolumn=80
 " airline
 let g:airline_powerline_fonts=1
 let g:bufferline_echo = 0
+let airline#extensions#default#section_use_groupitems = 0
 
 " dark mode
 " if &background == "dark"

@@ -70,7 +70,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/matchit.zip'
 Plug 'w0ng/vim-hybrid'
 Plug 'wellle/targets.vim'
-Plug 'zhaocai/GoldenView.Vim'
 
 call plug#end()
 
@@ -210,17 +209,6 @@ set pastetoggle=<leader>z
 " Fancy macros
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
-
-"=============================================
-" GoldenView.vim
-"=============================================
-
-let g:goldenview__enable_default_mapping = 0
-
-nmap <localleader>s <Plug>GoldenViewSplit
-
-nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
-nmap <silent> [34~ <Plug>GoldenViewSwitchToggle
 
 let g:fzf_action = {
       \ 'ctrl-s': 'split',

@@ -10,17 +10,14 @@ Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc', { 'do' : 'make' }
-Plug 'Shougo/vimshell.vim'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'Wolfy87/vim-enmasse'
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
 Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
-Plug 'duff/vim-scratch'
+Plug 'mtth/scratch.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'fatih/vim-go', { 'for' : 'go' }
 Plug 'golangtw/gocode.vim', { 'for' : 'go' }
 Plug 'gregsexton/MatchTag'
@@ -28,27 +25,29 @@ Plug 'guns/vim-clojure-static', { 'for' : 'clojure' }
 Plug 'hail2u/vim-css3-syntax'
 Plug 'honza/vim-snippets'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim', { 'on' : 'Goyo' }
 Plug 'junegunn/limelight.vim', { 'on' : 'Limelight' }
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-sneak'
-Plug 'kchmck/vim-coffee-script', { 'for' : 'coffeescript' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
+Plug 'kopischke/vim-fetch'
 Plug 'majutsushi/tagbar'
 Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
 Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-rfc'
+Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' } " optional syntax highlighting for RFC files
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'Raimondi/delimitMate'
-Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
+Plug 'ryanoasis/vim-webdevicons'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
-Plug 'slim-template/vim-slim', { 'for' : 'slim' }
+Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
+Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -56,6 +55,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
@@ -64,11 +64,12 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
-Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
 Plug 'vim-scripts/matchit.zip'
+Plug 'w0ng/vim-hybrid'
 Plug 'wellle/targets.vim'
-Plug 'zhaocai/GoldenView.Vim'
 
 call plug#end()
 
@@ -77,29 +78,33 @@ call plug#end()
 "=============================================
 
 " Color
-set t_Co=256
-let g:seoul256_background = 235
-colorscheme seoul256
+" set t_Co=256
+" let g:seoul256_background = 235
+let g:hybrid_use_Xresources = 1
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
 set background=dark
+colorscheme hybrid
 
 " Some color customizations
-set fillchars=vert:\│
+" set fillchars=vert:\│
 set colorcolumn=80
 
 " airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='sol'
 let g:bufferline_echo = 0
+let airline#extensions#default#section_use_groupitems = 0
 
 " dark mode
-if &background == "dark"
-  let g:airline_theme='bubblegum'
-endif
+" if &background == "dark"
+"   " let g:airline_theme='bubblegum'
+"   let g:airline_theme='base16'
+" endif
+let g:airline_theme='bubblegum'
 
 " Turn off error bells
 set noerrorbells
 set visualbell
-set t_vb=
 
 " Search
 set ignorecase
@@ -164,14 +169,6 @@ map <Right> :echo "ಠ_ಠ"<cr>
 map <Up>    :echo "ಠ_ಠ"<cr>
 map <Down>  :echo "ಠ_ಠ"<cr>
 
-" fix meta-keys which generate <Esc>a .. <Esc>z
-let c='a'
-while c <= 'z'
-  exec "set <M-".toupper(c).">=\e".c
-  exec "imap \e".c." <M-".toupper(c).">"
-  let c = nr2char(1+char2nr(c))
-endw
-
 " use gundo.vim
 nnoremap <F3> :GundoToggle<CR>
 
@@ -194,6 +191,9 @@ nnoremap <localleader>/ :nohlsearch<CR>
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 " Set up soft wrap for prose
 command! -nargs=* Wrap set wrap linebreak nolist spell
 let &showbreak='↪ '
@@ -205,52 +205,11 @@ set pastetoggle=<leader>z
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
-"=============================================
-" GoldenView.vim
-"=============================================
-
-let g:goldenview__enable_default_mapping = 0
-
-nmap <localleader>s <Plug>GoldenViewSplit
-
-nmap <silent> <F8>   <Plug>GoldenViewSwitchMain
-nmap <silent> [34~ <Plug>GoldenViewSwitchToggle
-
-"=============================================
-" Unite.vim
-"=============================================
-
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-
-  let g:unite_source_rec_async_command = 'ag -i --nocolor --nogroup --ignore ''.git'' --ignore ''.bzr'' --ignore ''node_modules'' --hidden -g ""'
-endif
-
-
-" file search
-nnoremap <C-p> :Unite -no-split -start-insert file_rec/async:!<cr>
-" content search
-nnoremap <space>/ :Unite grep:.<cr>
-" yank history
-let g:unite_source_history_yank_enable = 1
-nnoremap <space>y :Unite history/yank<cr>
-" buffer switch
-nnoremap <space>s :Unite -quick-match -auto-preview buffer<cr>
-
-" ignore certain directories in unite
-call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
-      \ 'ignore_pattern', join([
-      \ '\.git/',
-      \ '\.tmp/',
-      \ '\tmp',
-      \ 'build',
-      \ 'images',
-      \ 'wp-admin',
-      \ 'wp-includes',
-      \ '.|*cache*/',
-      \ ], '\|'))
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
 
 " enable tagbar toggle
 nmap <F9> :TagbarToggle<CR>
@@ -285,6 +244,9 @@ augroup RainbowParentheses
   " autocmd Syntax clojure RainbowParenthesesLoadChevrons
   autocmd VimEnter,BufRead,BufWinEnter,BufNewFile *.clj RainbowParenthesesActivate
 augroup END
+
+" enable fenced markdown files
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
 
 " Settings for phpcomplete.vim
 let g:phpcomplete_enhance_jump_to_definition = 0

@@ -273,3 +273,6 @@ zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<-
 # LS_COLORS='rs=0:di=04;35:ln=01;';
 export LS_COLORS
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# dasht
+DASHT_DOCSETS_DIR=~/Library/Application\ Support/Dash/DocSets

@@ -15,7 +15,7 @@ Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'Wolfy87/vim-enmasse'
 Plug 'airblade/vim-gitgutter'
 Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
-Plug 'duff/vim-scratch'
+Plug 'mtth/scratch.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
 Plug 'fatih/vim-go', { 'for' : 'go' }

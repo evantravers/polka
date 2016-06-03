@@ -78,7 +78,7 @@ alias lt='ls -lhart'
 alias ll="ls -lsvAt"
 alias git="hub"
 
-alias vim="nvim"
+# alias vim="nvim"
 
 # simple server
 alias serve="python -m SimpleHTTPServer"

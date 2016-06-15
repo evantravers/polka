@@ -11,6 +11,7 @@ Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'Wolfy87/vim-enmasse'
 Plug 'airblade/vim-gitgutter'

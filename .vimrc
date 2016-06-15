@@ -10,6 +10,7 @@ Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
 Plug 'AndrewRadev/gapply.vim'
 Plug 'Raimondi/delimitMate'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
 Plug 'Wolfy87/vim-enmasse'

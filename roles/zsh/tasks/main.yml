@@ -1,0 +1,15 @@
+---
+- name: install zsh
+  homebrew:
+    name: zsh
+    state: latest
+  tags:
+    - zsh
+    - pkg
+
+- name: install ~/.zshrc
+  copy:
+    src: zshrc
+    dest: ~/.zshrc
+  tags:
+    - zsh

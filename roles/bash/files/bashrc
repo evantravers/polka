@@ -75,27 +75,3 @@ if [ -e "${vew_file}" ]; then
   export WORKON_HOME="${HOME}/.pyenvs"
   source "${vew_file}"
 fi
-
-# gpg-agent
-if [ -t 0 ]; then
-  touch ~/.gpg-agent-info
-
-  if ( ! [ -S ~/.gnupg/S.gpg-agent ] ) && [ -x /usr/local/bin/gpg-agent ]; then
-    /usr/local/bin/gpg-agent --daemon --log-file ~/.gnupg/gpg-agent.log
-  fi
-
-  # test that the agent info in ~/.gpg-agent-info is actually valid
-  if ps -c -o comm `grep GPG_AGENT_INFO ~/.gpg-agent-info | cut -d ":" -f 2` | sed 1d | grep -q gpg-agent; then
-    source ~/.gpg-agent-info
-  else
-    echo "WARNING: ~/.gpg-agent-info PIDs invalid, not sourced."
-  fi
-
-  if ( ! [ -x /usr/local/bin/gpg ] ) && [ -x /usr/local/bin/gpg2 ]; then
-    alias gpg='gpg2'
-  fi
-
-  # make sure the agent has a good TTY and X11 display (for pinentry)
-  export GPG_TTY=`tty`
-  gpg-connect-agent updatestartuptty /bye | egrep -v "^OK$"
-fi

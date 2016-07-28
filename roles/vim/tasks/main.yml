@@ -19,10 +19,10 @@
   tags:
     - vim
 
-- name: install neobundle for managing vim packages
+- name: install plug.vim for managing vim packages
   git:
-    repo: https://github.com/Shougo/neobundle.vim.git 
-    dest: ~/.vim/bundle/neobundle.vim
+    repo: https://github.com/junegunn/vim-plug.git
+    dest: ~/.vim/autoload/plug.vim
   tags:
     - vim
 

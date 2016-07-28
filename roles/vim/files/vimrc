@@ -1,82 +1,119 @@
 " -polka-
 
-" Start .vimrc
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-scriptencoding utf-8
-
 "=============================================
 " Initialization
 "=============================================
 
-" Load neobundle
-call neobundle#begin(expand('~/.vim/bundle/'))
+call plug#begin('~/.vim/bundle')
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+Plug '1995eaton/vim-better-css-completion', { 'for' : 'css' }
+Plug '1995eaton/vim-better-javascript-completion', { 'for' : 'javascript' }
+Plug 'AndrewRadev/gapply.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
+Plug 'StanAngeloff/php.vim', { 'for' : 'php' }
+Plug 'Wolfy87/vim-enmasse'
+Plug 'airblade/vim-gitgutter'
+Plug 'dsawardekar/wordpress.vim', { 'for' : 'php' }
+Plug 'mtth/scratch.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir', { 'for' : 'elixir' }
+Plug 'fatih/vim-go', { 'for' : 'go' }
+Plug 'golangtw/gocode.vim', { 'for' : 'go' }
+Plug 'gregsexton/MatchTag'
+Plug 'guns/vim-clojure-static', { 'for' : 'clojure' }
+Plug 'hail2u/vim-css3-syntax'
+Plug 'honza/vim-snippets'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim', { 'on' : 'Goyo' }
+Plug 'junegunn/limelight.vim', { 'on' : 'Limelight' }
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-plug'
+Plug 'justinmk/vim-sneak'
+Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
+Plug 'kopischke/vim-fetch'
+Plug 'majutsushi/tagbar'
+Plug 'marijnh/tern_for_vim', { 'do' : 'npm install', 'for' : 'javascript' }
+Plug 'mattn/emmet-vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-rfc'
+Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' } " optional syntax highlighting for RFC files
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'ryanoasis/vim-webdevicons'
+Plug 'scrooloose/syntastic'
+Plug 'shawncplus/phpcomplete.vim', { 'for' : 'php' }
+Plug 'simnalamburt/vim-mundo', { 'on' : 'GundoToggle' }
+Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/matchit.zip'
+Plug 'w0ng/vim-hybrid'
+Plug 'wellle/targets.vim'
 
-NeoBundle 'YorickPeterse/happy_hacking.vim'
-NeoBundle 'duff/vim-scratch'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'jneen/ragel.vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'rodjek/vim-puppet'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'tpope/vim-ragtag'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'vim-scripts/matchit.zip'
-
-" Check for missing packages
-NeoBundleCheck
-
-call neobundle#end()
-
-" Load plugins
-filetype plugin indent on
+call plug#end()
 
 "=============================================
 " Options
 "=============================================
 
-" Enable utf-8
-set encoding=utf-8
-
 " Color
-set t_Co=256
+" set t_Co=256
+" let g:seoul256_background = 235
+let g:hybrid_use_Xresources = 1
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
 set background=dark
-colorscheme happy_hacking
-syntax on
+colorscheme hybrid
+
+" Some color customizations
+" set fillchars=vert:\│
+set colorcolumn=80
+
+" airline
+let g:airline_powerline_fonts=1
+let g:bufferline_echo = 0
+let airline#extensions#default#section_use_groupitems = 0
+
+" dark mode
+" if &background == "dark"
+"   " let g:airline_theme='bubblegum'
+"   let g:airline_theme='base16'
+" endif
+let g:airline_theme='bubblegum'
 
 " Turn off error bells
 set noerrorbells
 set visualbell
-set t_vb=
 
 " Search
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch
 
 " Tab completion
 set wildmode=list:longest,full
 set wildignore=*.swp,*.o,*.so,*.exe,*.dll
-set wildmenu
 
 " Scroll
 set scrolloff=3
@@ -86,22 +123,23 @@ set ts=2
 set sw=2
 set expandtab
 
+" make escape work sensibly
+set esckeys!
+
+" make visual block extend past line endings
+set virtualedit=block
+
 " Hud
-set ruler
 set number
-set laststatus=2 " Always show status bar
 set nowrap
-set colorcolumn=80
 
 " Visible whitespace
-" set listchars=tab:»·,trail:·
-" set list
+set listchars=tab:»·,trail:·
+set list
 
 " Buffers
 set hidden
 
-" History
-set history=1000
 set undolevels=1000
 
 " Backup Directories
@@ -111,11 +149,9 @@ if exists('&undodir')
   set undodir=~/.vim/undo,.
 endif
 
-" Fix backspace
-set backspace=indent,eol,start
-
 " GUI options
 if (has('gui_running'))
+  set guifont=Inconsolata-dz:h12
   set guioptions-=T
   set guioptions-=m
 endif
@@ -133,6 +169,12 @@ map <Right> :echo "ಠ_ಠ"<cr>
 map <Up>    :echo "ಠ_ಠ"<cr>
 map <Down>  :echo "ಠ_ಠ"<cr>
 
+" use gundo.vim
+nnoremap <F3> :GundoToggle<CR>
+
+" prevent syntastic from checking html constantly
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
 " Jump key
 nnoremap ` '
 nnoremap ' `
@@ -149,8 +191,73 @@ nnoremap <localleader>/ :nohlsearch<CR>
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
-"=============================================
-" Package Settings
-"=============================================
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
-let g:go_fmt_command = "goimports"
+" Set up soft wrap for prose
+command! -nargs=* Wrap set wrap linebreak nolist spell
+let &showbreak='↪ '
+
+" Toggle paste mode
+set pastetoggle=<leader>z
+
+" Fancy macros
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
+
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
+
+" enable tagbar toggle
+nmap <F9> :TagbarToggle<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+
+" Configure Limelight and Goyo
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+function! GoyoBefore()
+  Limelight
+endfunction
+
+function! GoyoAfter()
+  Limelight!
+endfunction
+
+let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+nnoremap <Leader>m :Goyo<CR>
+
+" Change some settings for clojure
+augroup RainbowParentheses
+  autocmd!
+  autocmd Syntax clojure RainbowParenthesesLoadRound
+  autocmd Syntax clojure RainbowParenthesesLoadSquare
+  autocmd Syntax clojure RainbowParenthesesLoadBraces
+  " autocmd Syntax clojure RainbowParenthesesLoadChevrons
+  autocmd VimEnter,BufRead,BufWinEnter,BufNewFile *.clj RainbowParenthesesActivate
+augroup END
+
+" enable fenced markdown files
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
+
+" Settings for phpcomplete.vim
+let g:phpcomplete_enhance_jump_to_definition = 0
+
+" enable es6
+augroup javascriptfiletype
+  au BufRead,BufNewFile *.js.es6 setfiletype javascript
+augroup END
+
+" fancy tag lookup
+set tags=./tags;/,tags;/
+
+" open quickfix after :Ggrep
+autocmd QuickFixCmdPost *grep* cwindow

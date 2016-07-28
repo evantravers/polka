@@ -20,6 +20,7 @@
     - vim
 
 - name: install plug.vim for managing vim packages
+  ignore_errors: True
   git:
     repo: https://github.com/junegunn/vim-plug.git
     dest: ~/.vim/autoload/plug.vim

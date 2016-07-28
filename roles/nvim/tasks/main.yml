@@ -20,6 +20,7 @@
     - nvim
 
 - name: install plug.vim for managing vim packages
+  ignore_errors: True
   git:
     repo: https://github.com/junegunn/vim-plug.git
     dest: ~/.config/nvim/autoload/plug.vim
@@ -28,7 +29,7 @@
 
 - name: install ~/.config/nvim/init.vim
   copy:
-    src: vimrc
+    src: init
     dest: ~/.config/nvim/init.vim
   tags:
     - nvim

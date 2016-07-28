@@ -3,7 +3,7 @@
 - name: checking installed version of go
   command: cat /usr/local/go/VERSION
   register: current_go_version
-  ignore_errors: yes
+  ignore_errors: True
   changed_when: False
   tags:
     - go

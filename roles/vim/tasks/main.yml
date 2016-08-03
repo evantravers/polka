@@ -21,8 +21,8 @@
 
 - name: install plug.vim for managing vim packages
   ignore_errors: True
-  git:
-    repo: https://github.com/junegunn/vim-plug.git
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     dest: ~/.vim/autoload/plug.vim
   tags:
     - vim

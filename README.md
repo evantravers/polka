@@ -1,4 +1,8 @@
-# Polka
+# ⛔️ Deprecated: Polka
+
+The maintainers of this project have moved on to other methods. Some are using [stow](https://www.gnu.org/software/stow/).
+
+---
 
 Development configuration for the fishbowl. This is a opinionated setup, strongly believing in linux, vim, and utilizes the [base16](https://github.com/chriskempson/base16) color scheme.
 
